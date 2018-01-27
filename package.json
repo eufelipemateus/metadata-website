@@ -4,15 +4,14 @@
   "dependencies": {
     "metafetch": "^1.6.1",
     "request-promise": "^2.0.0",
-	"express": "~4.9.8"
-
+    "express": "~4.9.8"
   },
   "version": "0.0.1",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +23,8 @@
     "get",
     "fetch",
     "information",
-	"json",
-	"javascript"
+    "json",
+    "javascript"
   ],
   "author": "Felipe Mateus",
   "license": "MIT"
