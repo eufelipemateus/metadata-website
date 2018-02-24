@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const request = require('sync-request');
 
 var metafetch = require('metafetch');
 
@@ -9,6 +10,10 @@ app.get('/Fetch', function(req, res) {
 
 		res.writeHead(200, {'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'});
 		metafetch.fetch(req.query.url, (err, meta)=> {
+			
+			
+			
+			
 			
 			/*console.log('title: ', meta.title);
 			console.log('description: ', meta.description);
@@ -25,7 +30,24 @@ app.get('/Fetch', function(req, res) {
 			
 			res.status(200).send(JSON.stringify(meta));
 			*/			
-			res.write(JSON.stringify(meta));
+			
+			
+			let result = {};
+			
+			result.title = meta.title;
+			result.description = meta.description;
+			result.url = meta.url;
+			result.siteName = meta.siteName;
+			
+			
+			
+			result.image = {};
+			result.image.url = meta.image;
+			result.image.data =request('GET', meta.image).getBody()
+			
+	
+			
+			res.write(JSON.stringify(result));
 			res.end();
 		});
 });

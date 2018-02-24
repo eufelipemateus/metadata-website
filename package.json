@@ -3,7 +3,8 @@
   "description": "Get website metadata return json.",
   "dependencies": {
     "metafetch": "^1.6.1",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+	"sync-request": "^4.1.0"
   },
   "version": "0.0.1",
   "main": "index.js",
