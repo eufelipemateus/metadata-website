@@ -38,14 +38,13 @@ app.get('/Fetch', function(req, res) {
 			result.description = meta.description;
 			result.url = meta.url;
 			result.siteName = meta.siteName;
-			
-			
+
+						
 			
 			result.image = {};
 			result.image.url = meta.image;
-			result.image.data =request('GET', meta.image).getBody('utf8')
+			result.image.data =request('GET', meta.image).getBody().toString();
 			
-	
 			
 			res.write(JSON.stringify(result));
 			res.end();
