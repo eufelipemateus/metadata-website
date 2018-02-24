@@ -43,7 +43,7 @@ app.get('/Fetch', function(req, res) {
 			
 			result.image = {};
 			result.image.url = meta.image;
-			result.image.data =request('GET', meta.image).getBody()
+			result.image.data =request('GET', meta.image).getBody('utf8')
 			
 	
 			
