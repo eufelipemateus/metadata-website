@@ -43,7 +43,9 @@ app.get('/Fetch', function(req, res) {
 			
 			result.image = {};
 			result.image.url = meta.image;
-			result.image.data =request('GET', meta.image).getBody().toString();
+			result.image.data =request('GET', meta.image).getBody().toString('base64');
+			
+			
 			
 			
 			res.write(JSON.stringify(result));
