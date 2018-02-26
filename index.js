@@ -15,7 +15,7 @@ app.get('/Fetch', function(req, res) {
 			
 			
 			
-			/*console.log('title: ', meta.title);
+			console.log('title: ', meta.title);
 			console.log('description: ', meta.description);
 			console.log('type: ', meta.type);
 			console.log('url: ', meta.url);
@@ -29,7 +29,7 @@ app.get('/Fetch', function(req, res) {
 			console.log('headers: ', meta.headers);
 			
 			res.status(200).send(JSON.stringify(meta));
-			*/			
+				
 			
 			
 			let result = {};
@@ -44,9 +44,7 @@ app.get('/Fetch', function(req, res) {
 			result.image = {};
 			result.image.url = meta.image;
 			result.image.data =request('GET', meta.image).getBody().toString('base64');
-			
-			
-			
+					
 			
 			res.write(JSON.stringify(result));
 			res.end();
