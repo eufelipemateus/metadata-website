@@ -14,8 +14,7 @@ app.get('/Fetch', function(req, res) {
 			if(err){
 				console.log(err);
 				return ;
-			}
-			
+			}	
 			
 			
 			console.log('title: ', meta.title);
@@ -32,8 +31,7 @@ app.get('/Fetch', function(req, res) {
 			console.log('headers: ', meta.headers);
 			
 			res.status(200).send(JSON.stringify(meta));
-				
-			
+		
 			
 			let result = {};
 			
