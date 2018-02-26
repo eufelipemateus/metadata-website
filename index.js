@@ -11,13 +11,8 @@ app.get('/Fetch', function(req, res) {
 		res.writeHead(200, {'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'});
 		metafetch.fetch(req.query.url, (err, meta)=> {
 			
-			if(err){
-				console.log(err);
-				return res.end();
-				
-			}	
-			
-			
+						
+			/*
 			console.log('title: ', meta.title);
 			console.log('description: ', meta.description);
 			console.log('type: ', meta.type);
@@ -31,9 +26,8 @@ app.get('/Fetch', function(req, res) {
 			console.log('links: ', meta.links);
 			console.log('headers: ', meta.headers);
 			
-			res.status(200).send(JSON.stringify(meta));
+			res.status(200).send(JSON.stringify(meta));*/
 		
-			
 			let result = {};
 			
 			result.title = meta.title;
@@ -46,7 +40,7 @@ app.get('/Fetch', function(req, res) {
 			result.image = {};
 			result.image.url = meta.image;
 			result.image.data =request('GET', meta.image).getBody().toString('base64');
-					
+						
 			
 			res.write(JSON.stringify(result));
 			res.end();
