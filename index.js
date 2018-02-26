@@ -11,7 +11,10 @@ app.get('/Fetch', function(req, res) {
 		res.writeHead(200, {'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'});
 		metafetch.fetch(req.query.url, (err, meta)=> {
 			
-			
+			if(err){
+				console.log(erro);
+				return ;
+			}
 			
 			
 			
