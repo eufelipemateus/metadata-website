@@ -12,7 +12,7 @@ app.get('/Fetch', function(req, res) {
 		metafetch.fetch(req.query.url, (err, meta)=> {
 			
 			if(err){
-				console.log(erro);
+				console.log(err);
 				return ;
 			}
 			
