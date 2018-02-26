@@ -13,7 +13,8 @@ app.get('/Fetch', function(req, res) {
 			
 			if(err){
 				console.log(err);
-				return ;
+				return res.end();
+				
 			}	
 			
 			
