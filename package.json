@@ -2,10 +2,11 @@
   "name": "metadata-website",
   "description": "Get website metadata return json.",
   "dependencies": {
+    "cheerio": "latest",
     "express": "^4.16.2",
     "metafetch": "^1.6.1",
-    "sync-request": "^4.1.0",
-	 "cheerio"    : "latest"
+    "request": "^2.83.0",
+    "sync-request": "^4.1.0"
   },
   "version": "0.0.1",
   "main": "index.js",
